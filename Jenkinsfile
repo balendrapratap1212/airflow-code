@@ -11,6 +11,7 @@ pipeline {
                 echo "Balendra"
                 sh 'az storage file upload-batch --destination airflow-dags --source dags --account-name $STORAGE_ACCOUNT_CREDENTIALS_DEV_USR --account-key $STORAGE_ACCOUNT_CREDENTIALS_DEV_PSW'
         }
+    }
     stage('Deploy into QA'){
       steps{
         echo "Balendra"
@@ -18,5 +19,4 @@ pipeline {
       }
     }
     }
-  }
   }
