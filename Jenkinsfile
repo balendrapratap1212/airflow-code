@@ -15,7 +15,7 @@ pipeline {
     stage('Deploy into QA'){
       steps{
         echo "Balendra"
-                sh 'az storage file upload-batch --destination airflow-dags --source dags --account-name $STORAGE_ACCOUNT_CREDENTIALS_QA_USR --account-key $SSTORAGE_ACCOUNT_CREDENTIALS_QA_PSW'
+                sh 'az storage file upload-batch --destination airflow-dags --source dags --account-name $STORAGE_ACCOUNT_CREDENTIALS_QA_USR --account-key $STORAGE_ACCOUNT_CREDENTIALS_QA_PSW'
       }
     }
     }
